@@ -38,10 +38,11 @@ if [ -f `brew --prefix`/etc/autojump ]; then
       . `brew --prefix`/etc/autojump
 fi
 
-bindkey "^[[A" history-beginning-search-backward
-bindkey "^[[B" history-beginning-search-forward
+bindkey "^[[A" history-search-backward
+bindkey "^[[B" history-search-forward
 
 bindkey '^[[5D' emacs-backward-word
 bindkey '^[[5C' emacs-forward-word
 
+if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 # Customize to your needs...
